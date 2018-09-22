@@ -25,6 +25,8 @@ class Message {
         self.timestamp = timestamp
     }
     
+    //MARK: - Create cloud kit record - and failable init for fetching - importatnt step - should be the same every time - practice it.
+    
     // two thing are needed to set this up into a cloud kit. - converting between model, and CKRecord when fetching and uploading
     
     //#1 turn model object into something that cloud kit can work with - CKRecord
@@ -59,7 +61,7 @@ class Message {
 
 
 
-
+//TODO: - create a code snippit from the code above
 
 
 

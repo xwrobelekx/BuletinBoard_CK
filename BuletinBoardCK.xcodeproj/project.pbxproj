@@ -14,6 +14,8 @@
 		3BB58C612156BE9E0086B561 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB58C602156BE9E0086B561 /* CloudKit.framework */; };
 		3BB58C692156C7840086B561 /* BuletinListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB58C682156C7840086B561 /* BuletinListTableViewController.swift */; };
 		3BB58C6B2156C7D10086B561 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB58C6A2156C7D10086B561 /* Message.swift */; };
+		3BB58C6D2156CFC40086B561 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB58C6C2156CFC40086B561 /* MessageController.swift */; };
+		3BB58C6F2156D0AE0086B561 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB58C6E2156D0AE0086B561 /* CloudKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		3BB58C602156BE9E0086B561 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		3BB58C682156C7840086B561 /* BuletinListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuletinListTableViewController.swift; sourceTree = "<group>"; };
 		3BB58C6A2156C7D10086B561 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3BB58C6C2156CFC40086B561 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		3BB58C6E2156D0AE0086B561 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				3BB58C5E2156BE9C0086B561 /* BuletinBoardCK.entitlements */,
-				3BB58C672156C63B0086B561 /* Cloud */,
+				3BB58C672156C63B0086B561 /* CloudKitManager */,
 				3BB58C662156C6330086B561 /* Model Controllers */,
 				3BB58C652156C62B0086B561 /* Model */,
 				3BB58C642156C6230086B561 /* View Controllers */,
@@ -118,15 +122,17 @@
 		3BB58C662156C6330086B561 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3BB58C6C2156CFC40086B561 /* MessageController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
-		3BB58C672156C63B0086B561 /* Cloud */ = {
+		3BB58C672156C63B0086B561 /* CloudKitManager */ = {
 			isa = PBXGroup;
 			children = (
+				3BB58C6E2156D0AE0086B561 /* CloudKitManager.swift */,
 			);
-			path = Cloud;
+			path = CloudKitManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +217,8 @@
 				3BB58C6B2156C7D10086B561 /* Message.swift in Sources */,
 				3BB58C4D2156BE330086B561 /* AppDelegate.swift in Sources */,
 				3BB58C692156C7840086B561 /* BuletinListTableViewController.swift in Sources */,
+				3BB58C6D2156CFC40086B561 /* MessageController.swift in Sources */,
+				3BB58C6F2156D0AE0086B561 /* CloudKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Buletin Board-->
         <scene sceneID="rWz-sk-MmA">
             <objects>
                 <tableViewController id="hdN-V5-td8" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                             <outlet property="delegate" destination="hdN-V5-td8" id="fDt-Vs-oa0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0uM-U6-XVE"/>
+                    <navigationItem key="navigationItem" title="Buletin Board" id="0uM-U6-XVE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0S-S0-kui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

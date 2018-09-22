@@ -52,9 +52,53 @@ class MessageController {
     
     
     
+    func fetchMessagesRecordsFromiCloud() {
+        
+        CloudKitManager.shared.fetchRecordsOf(type: Message.TypeKey, database: CKContainer.default().publicCloudDatabase) { (records, error) in
+            if let error = error {
+                print("There was an error fetching message records from iCloud \(error.localizedDescription)")
+            }
+            
+            guard let records = records else {
+            print("No Records")
+                return
+            }
+            
+            // flat map goes thru all the messages returned from iCloud, and only keeps good ones, removing any nil values
+            let messages = records.compactMap({Message(cloudKitRecord: $0)})
+            
+            self.messages = messages
+            // since we have notification center set up, we dont have to do anything to reload the table view,
+            //as soon as messages get asigned with new values that notification center will notify the viewDidLoad, and its gone call the updateViews function that reload the table views with new data
+        }
+    }
+    
+    
+    
+
+    
+    
     
     
     
     
     
 }
+
+
+
+//MARK: - Steps for save and fetch functions:
+
+//SAVE
+
+//#1 Initialize new message object
+//#2 Use a CloudKitManager function to save the message's CKRecords
+//#3 Check for errors
+//#4 If there are no errors, then append the message to the message array
+
+//FETCH
+
+//#1 Use a CloudKitManager function to fetch Message records from the right database
+//#2 Check for errors in the completion
+//#3 Take the records returned and initialize Message objects from them.
+//#4 Set the newly created messages in the MessageController's array of Messages

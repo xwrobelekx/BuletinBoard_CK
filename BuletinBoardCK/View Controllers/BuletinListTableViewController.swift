@@ -21,6 +21,12 @@ class BuletinListTableViewController: UITableViewController {
         
         //this listens for any notifications, and it will call a helper method to reload the table view
         NotificationCenter.default.addObserver(self, selector: #selector(reloadViews), name: MessageController.shared.messagesWereUpdatedNotification, object: nil)
+        
+        //indycates the netwok activity - turn it of before you update the tebleView - since you have the data back
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        //fetch records form iCloud
+        MessageController.shared.fetchMessagesRecordsFromiCloud()
     }
     
     
@@ -41,13 +47,17 @@ class BuletinListTableViewController: UITableViewController {
     //MARK: - Actions
     @IBAction func postButtonTapped(_ sender: Any) {
         guard let messageText = messageTextField.text else {return}
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         MessageController.shared.saveMessageRecordToiCloudWith(text: messageText)
+        self.messageTextField.text = ""
+        self.messageTextField.resignFirstResponder()
     }
     
     
     //MARK: - Helper Methods
     @objc func reloadViews() {
         DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             self.tableView.reloadData()
         }
     }

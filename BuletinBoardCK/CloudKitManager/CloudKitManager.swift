@@ -14,6 +14,9 @@ import CloudKit
 
 class CloudKitManager {
     
+    //shared instance
+    static let shared = CloudKitManager()
+    
     
     //this func saves the record to cloud, and it lets us enter if we want to use private or public data base - and then completion
     func saveRecordToCloudKit(record: CKRecord, database: CKDatabase, completion: @escaping (Error?) -> Void = {_ in}) {

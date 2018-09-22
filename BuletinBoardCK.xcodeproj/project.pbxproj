@@ -16,6 +16,7 @@
 		3BB58C6B2156C7D10086B561 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB58C6A2156C7D10086B561 /* Message.swift */; };
 		3BB58C6D2156CFC40086B561 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB58C6C2156CFC40086B561 /* MessageController.swift */; };
 		3BB58C6F2156D0AE0086B561 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB58C6E2156D0AE0086B561 /* CloudKitManager.swift */; };
+		3BB58C722156DB5F0086B561 /* DateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB58C712156DB5F0086B561 /* DateFormater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		3BB58C6A2156C7D10086B561 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		3BB58C6C2156CFC40086B561 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		3BB58C6E2156D0AE0086B561 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		3BB58C712156DB5F0086B561 /* DateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				3BB58C5E2156BE9C0086B561 /* BuletinBoardCK.entitlements */,
+				3BB58C702156D7C90086B561 /* Helpers */,
 				3BB58C672156C63B0086B561 /* CloudKitManager */,
 				3BB58C662156C6330086B561 /* Model Controllers */,
 				3BB58C652156C62B0086B561 /* Model */,
@@ -133,6 +136,14 @@
 				3BB58C6E2156D0AE0086B561 /* CloudKitManager.swift */,
 			);
 			path = CloudKitManager;
+			sourceTree = "<group>";
+		};
+		3BB58C702156D7C90086B561 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3BB58C712156DB5F0086B561 /* DateFormater.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				3BB58C692156C7840086B561 /* BuletinListTableViewController.swift in Sources */,
 				3BB58C6D2156CFC40086B561 /* MessageController.swift in Sources */,
 				3BB58C6F2156D0AE0086B561 /* CloudKitManager.swift in Sources */,
+				3BB58C722156DB5F0086B561 /* DateFormater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

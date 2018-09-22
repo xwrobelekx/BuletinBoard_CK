@@ -20,7 +20,7 @@ class Message {
     let text: String
     let timestamp: Date
     
-    init(text: String, timestamp:Date){
+    init(text: String, timestamp: Date = Date()){
         self.text = text
         self.timestamp = timestamp
     }
